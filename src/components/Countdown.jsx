@@ -12,12 +12,72 @@ import ReactPlayer from "react-player";
 import { FaTwitterSquare } from "react-icons/fa";
 import ILoveYou from "../assets/iloveyou.mp4";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from 'leaflet';
+import Sparkle from 'react-sparkle'
+
 
 const Countdown = () => {
   const [playing, setPlaying] = useState(false);
   const [confetti, setConfetti] = useState(false);
   const [playingVid, setPlayingVid] = useState(false);
   const [sparkles, setSparkles] = useState(false);
+
+  const parkIcon = new L.Icon({
+  iconUrl: '/pine.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+const museumIcon = new L.Icon({
+  iconUrl: '/museum.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const churchIcon = new L.Icon({
+  iconUrl: '/progress.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const timsIcon = new L.Icon({
+  iconUrl: '/donut.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const cnIcon = new L.Icon({
+  iconUrl: '/cn-tower.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const iconicIcon = new L.Icon({
+  iconUrl: '/location-pin.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const drinkIcon = new L.Icon({
+  iconUrl: '/beer-mug.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+const concertIcon = new L.Icon({
+  iconUrl: '/mcr.png', // adjust path
+  iconSize: [40, 40],
+  iconAnchor: [19, 38],  // tip of the marker
+  popupAnchor: [0, -38],
+});
+
+
 
   return (
     <>
@@ -45,11 +105,11 @@ const Countdown = () => {
           <span style={{ fontFamily: "Arial" }}>...</span>{" "}
         </p>
 
-        <div className=" border-2 rounded-2xl h-fit p-4 my-10 ml-90">
+        <div className="border-2 rounded-2xl h-fit p-4 my-10 ml-90">
           <a
             className="flex align-middle "
             target="_blank"
-            href="https://twitter.com/intent/tweet?text=I'm going to Canada to see my friends (and @MCRofficial) so they made me a countdown because they love me. https://example.com"
+            href="https://twitter.com/intent/tweet?text=I'm going to Toronto to see my friends (and @MCRofficial) so they made me my own countdown because they love me. https://example.com"
           >
             <FaTwitterSquare className="size-6 mr-1.5" /> Tell everyone that
             you're coming!!!
@@ -100,47 +160,47 @@ const Countdown = () => {
             attribution='&copy; <a href="https://carto.com/">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           />
-          <Marker position={[43.642674758411204, -79.38487930271252]}>
+          <Marker position={[43.642674758411204, -79.38487930271252]} icon={cnIcon}>
             <Popup>CN Tower</Popup>
           </Marker>
-          <Marker position={[43.65334409122496, -79.38316521590076]}>
+          <Marker position={[43.65334409122496, -79.38316521590076]} icon={iconicIcon}>
             <Popup>Nathan Philips Square</Popup>
           </Marker>
-          <Marker position={[43.67812946874554, -79.4089649567081]}>
+          <Marker position={[43.67812946874554, -79.4089649567081]} icon={iconicIcon}>
             <Popup>Casa Loma</Popup>
           </Marker>
-          <Marker position={[43.66797384722963, -79.3938534205212]}>
+          <Marker position={[43.66797384722963, -79.3938534205212]} icon={museumIcon}>
             <Popup>Royal Ontario Museum</Popup>
           </Marker>
-          <Marker position={[43.646655447038135, -79.46325503573856]}>
+          <Marker position={[43.646655447038135, -79.46325503573856]} icon={parkIcon}>
             <Popup>High Park</Popup>
           </Marker>
-          <Marker position={[43.65064564126307, -79.35872595140776]}>
+          <Marker position={[43.65064564126307, -79.35872595140776]} icon={drinkIcon}>
             <Popup>Distillery District</Popup>
           </Marker>
-          <Marker position={[43.65450749096199, -79.35182222299845]}>
+          <Marker position={[43.65450749096199, -79.35182222299845]} icon={parkIcon}>
             <Popup>Corktown Common</Popup>
           </Marker>
-          <Marker position={[43.648845590061896, -79.37070649016631]}>
+          <Marker position={[43.648845590061896, -79.37070649016631]} icon={iconicIcon}>
             <Popup>St. Lawrence Market</Popup>
           </Marker>
-          <Marker position={[43.62222482213766, -79.37480630258065]}>
+          <Marker position={[43.62222482213766, -79.37480630258065]} icon={parkIcon}>
             <Popup>Toronto Islands</Popup>
           </Marker>
-          <Marker position={[43.64399442494178, -79.36917429852957]}>
+          <Marker position={[43.64399442494178, -79.36917429852957]} icon={iconicIcon}>
             <Popup>Sugar Beach</Popup>
           </Marker>
-          <Marker position={[43.63805288242274, -79.38468671749936]}>
+          <Marker position={[43.63805288242274, -79.38468671749936]} icon={drinkIcon}>
             <Popup>Amsterdam Brewhouse</Popup>
           </Marker>
-          <Marker position={[43.64171972195761, -79.38938766267555]}>
+          <Marker position={[43.64171972195761, -79.38938766267555]} icon={concertIcon}>
             <Popup>Rogers Centre</Popup>
           </Marker>
-          <Marker position={[43.64724796837985, -79.37710219925438]}>
+          <Marker position={[43.64724796837985, -79.37710219925438]} icon={timsIcon}>
             <Popup>Tim Hortons</Popup>
           </Marker>
 
-          <Marker position={[43.67298093130023, -79.38748699695458]}>
+          <Marker position={[43.67298093130023, -79.38748699695458]} icon={churchIcon}>
             <Popup>Church Street</Popup>
           </Marker>
         </MapContainer>
@@ -156,7 +216,7 @@ const Countdown = () => {
           className="align-bottom text-3xl ml-20 pt-4"
           style={{ fontFamily: "Swanky and Moo Moo" }}
         >
-          You can start to get used to the{" "}
+          You can start to get to know the{" "}
           <span className="cursor-[url('/toronto.png'),_auto]">city:</span>{" "}
         </p>
       </div>
@@ -178,14 +238,14 @@ const Countdown = () => {
         </div>
         <div className="border-b-10 border-l-10 border-rose-800 rounded-xl">
           <ReactPlayer
-            src="https://www.youtube.com/watch?v=htY-Fnw-yDA"
+            src="https://youtu.be/YsnIdWMfPgE?si=GcU1cc99R62Z8rZD"
             controls={false}
             muted={true}
             playing={true}
             loop={true}
             config={{
               youtube: {
-                start: 601,
+                start: 74,
               },
             }}
           />
@@ -208,7 +268,11 @@ const Countdown = () => {
             setPlayingVid(true);
             setSparkles(false);
           }}
+          
         >
+          {sparkles && <>
+          <Sparkle color={"random"} count={100} overflowPx={60} flickerSpeed="slow" />
+          </>}
           <ReactPlayer
             onEnded={() => {
               setPlayingVid(false);
