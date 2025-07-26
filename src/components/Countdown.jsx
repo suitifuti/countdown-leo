@@ -21,6 +21,7 @@ const Countdown = () => {
   const [confetti, setConfetti] = useState(false);
   const [playingVid, setPlayingVid] = useState(false);
   const [sparkles, setSparkles] = useState(false);
+  const [credits, setCredits] = useState(false);
 
   const parkIcon = new L.Icon({
   iconUrl: '/pine.png', // adjust path
@@ -252,7 +253,7 @@ const concertIcon = new L.Icon({
           And finally, here's a special gift:
         </p>{" "}
       </div>
-      <div className="w-full text-center mt-5 mb-8">
+      <div className="w-full text-center mt-5 ">
         <div
           className="relative mx-auto w-fit"
           onClick={() => {
@@ -279,12 +280,45 @@ const concertIcon = new L.Icon({
         </p>
       </div>
 
+      <p
+          className="align-bottom text-3xl ml-20 mt-9 mb-8"
+          style={{ fontFamily: "Swanky and Moo Moo" }}
+        >Whatever you do in this life, it's not legendary unless your friends are there to see it.</p>
+
       <div className="w-full absolute bg-stone-900 p-2 border-t-6 border-dotted border-stone-400 outline-offset-2">
         <p className="text-center mx-auto w-fit flex font-semibold text-stone-100">
           Made by Gabi with{" "}
           <img className="size-6 ml-2 bottom-0" src={cryingColour}></img>. For
           Leo
         </p>
+        <p className="text-stone-300 text-xs" onClick={() => setCredits(!credits)}>{"> "} Credits</p>
+        {credits && <div className="text-stone-200 block text-xs">
+          <a href="https://www.flaticon.com/free-icons/lgbt" title="lgbt icons">Lgbt icons created by Vlad Szirka - Flaticon</a>
+          <br/>
+          <a href="https://www.flaticon.com/free-icons/pine" title="pine icons">Pine icons created by Freepik - Flaticon</a>
+          <br />
+          <a href="https://www.flaticon.com/free-icons/maps-and-location" title="maps and location icons">Maps and location icons created by Vitaly Gorbachev - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/beer-mug" title="beer mug icons">Beer mug icons created by tulpahn - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/cn-tower" title="cn tower icons">Cn tower icons created by smalllikeart - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/art-gallery" title="art gallery icons">Art gallery icons created by Freepik - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/dessert" title="dessert icons">Dessert icons created by nawicon - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/emo" title="emo icons">Emo icons created by Freepik - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by Freepik - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/emoji" title="emoji icons">Emoji icons created by amonrat rungreangfangsai - Flaticon</a>
+            <br/>
+            <a href="https://www.flaticon.com/free-icons/pixel" title="pixel icons">Pixel icons created by Freepik - Flaticon</a>
+
+
+
+          </div>}
+
       </div>
     </>
   );
