@@ -24,55 +24,55 @@ const Countdown = () => {
   const [credits, setCredits] = useState(false);
 
   const parkIcon = new L.Icon({
-  iconUrl: '/pine.png', // adjust path
+  iconUrl: '/countdown-leo/pine.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 const museumIcon = new L.Icon({
-  iconUrl: '/museum.png', // adjust path
+  iconUrl: '/countdown-leo/museum.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const churchIcon = new L.Icon({
-  iconUrl: '/progress.png', // adjust path
+  iconUrl: '/countdown-leo/progress.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const timsIcon = new L.Icon({
-  iconUrl: '/donut.png', // adjust path
+  iconUrl: '/countdown-leo/donut.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const cnIcon = new L.Icon({
-  iconUrl: '/cn-tower.png', // adjust path
+  iconUrl: '/countdown-leo/cn-tower.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const iconicIcon = new L.Icon({
-  iconUrl: '/location-pin.png', // adjust path
+  iconUrl: '/countdown-leo/location-pin.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const drinkIcon = new L.Icon({
-  iconUrl: '/beer-mug.png', // adjust path
+  iconUrl: '/countdown-leo/beer-mug.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
 });
 
 const concertIcon = new L.Icon({
-  iconUrl: '/mcr.png', // adjust path
+  iconUrl: '/countdown-leo/mcr.png', // adjust path
   iconSize: [40, 40],
   iconAnchor: [19, 38],  // tip of the marker
   popupAnchor: [0, -38],
