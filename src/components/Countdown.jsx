@@ -5,7 +5,7 @@ import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import Play from "./Play";
 import Counter from "./Counter";
-import cryingColour from "../assets/crying_colour.png";
+import cryingColour from "/crying_colour.png";
 import "./fonts.css";
 import { Confetti } from "@neoconfetti/react";
 import ReactPlayer from "react-player";
@@ -105,16 +105,7 @@ const concertIcon = new L.Icon({
           <span style={{ fontFamily: "Arial" }}>...</span>{" "}
         </p>
 
-        <div className="border-2 rounded-2xl h-fit p-4 my-10 ml-90">
-          <a
-            className="flex align-middle "
-            target="_blank"
-            href="https://twitter.com/intent/tweet?text=I'm going to Toronto to see my friends (and @MCRofficial) so they made me my own countdown because they love me. https://example.com"
-          >
-            <FaTwitterSquare className="size-6 mr-1.5" /> Tell everyone that
-            you're coming!!!
-          </a>
-        </div>
+        
       </div>
       <div onClick={() => setConfetti(!confetti)}>
         <Box>
